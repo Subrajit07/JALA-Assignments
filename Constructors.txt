@@ -1,0 +1,90 @@
+							CONSTRUCTOR
+							============
+1.
+	
+	public class Cons1 
+	{
+		public Cons1() {
+			System.out.println("Cons1.default");
+		}
+		public Cons1(int a) {
+			this();
+			System.out.println("Cons1.One-Parameter");
+		}
+		public Cons1(int a,int b) {
+			this(a);
+			System.out.println("Cons1.Two-Parameter");
+		}
+		public static void main(String[] args) {
+
+			Cons1 c1=new Cons1(10, 20);
+		}
+	}
+
+2.
+	class Sub{
+		public Sub() {
+			System.out.println("Sub.default");
+		}
+		public Sub(int q) {
+			System.out.println("Sub.Parameter constructor");
+		}
+	}
+	public class Cons1 extends Sub
+	{
+	
+		public Cons1() {
+			super();
+		
+		}
+		public Cons1(int a) {
+			super(a);
+		}
+		public static void main(String[] args) {
+			Cons1 s=new Cons1();
+			Cons1 s1=new Cons1(10);
+		
+		}
+	}
+
+3.
+	Here we can use private, public,and protected access modifiers to the constructor, But we cant use default access modifier.Because
+	
+	when we declare class as public then implicitly defalut constructor should be public ,if class is protected then implicitly defalut constructor
+	
+	should be protected ,class as private then implicitly defalut constructor should be private. So the JVM will take default constructor
+	
+	we need not want to define constructor using 'default' access modifier.
+
+	
+	public class Cons1 
+	{	
+	
+		public Cons1() {
+			System.out.println("default cons");
+		}
+		private Cons1(int a) {
+			this();
+		}
+		protected Cons1(int a,int b) {
+			this(a);
+		}
+		public static void main(String[] args) {
+			Cons1 s1=new Cons1(10,20);
+			
+		}
+	}
+ 
+	* In one class we cant define multiple constructor having same parameter.
+
+4.
+	Constructor doesnot have any return type. It is used to Initialized the instance variable , objects.
+	
+	when we create an object at that time the constructor is called automatically .
+
+5.
+	We can't call constructor multiple time with the same object.
+	
+	To call the multiple constructor we need to create multiple objects. At the time of object creation then constructor will invoked.
+	
+	

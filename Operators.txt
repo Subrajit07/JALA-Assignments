@@ -1,0 +1,151 @@
+									OPERATORS
+									=========
+1.
+	public class Arithmatic{
+
+		public static void main(String[]args){
+	
+			int a=10;
+			int b=20;
+		
+			int addition=a+b;
+			int substraction=a-b;
+			int multiplication=a*b;
+			int division=a/b;
+			
+			System.out.println(addition);
+			System.out.println(substraction);
+			System.out.println(multiplication);
+			System.out.println(division);
+		
+		}
+	}
+2.
+	public Class Operate{
+	
+		public void increment(int a){
+
+			System.out.println(a++);
+			System.out.println(++a);
+	}
+		public void decrement(int a){
+
+			System.out.println(a--);
+			System.out.println(--a);
+	}
+
+		public static void main(String[]args){
+			
+			Operate op=new Operate();
+			
+			op.increment(10);
+			op.decrement(10);
+			
+		}
+	}
+
+3.
+	public class Operator{
+
+		public void equal(int a,int b){
+			
+		if(a==b)
+			System.out.println("Both are equal");
+		else
+			System.out.println("Not equal");
+		
+		}
+		
+		public void notEqual(int a,int b)
+		{
+		
+			if(a!=b)
+				System.out.println("Both are not equal");
+			else
+				System.out.println("Both are equal");
+		
+		}
+
+		public static void main(String[]args){
+			
+			Operate op=new Operate();
+			op.equal(15,15);
+			op.notEqual(25,28);
+			
+		}
+
+	}
+
+4.
+	public class Operator{
+
+		public static void main(String[]args){
+			
+			int a=15;
+			int b=25;
+			
+		if(a==b)
+			System.out.println("both a & b are same value");
+		else
+			System.out.println("both values are different");
+			
+		}
+
+	}
+
+5.
+	public class Logical{
+
+		public static void main(String[]args){
+			
+			boolean a=true;
+			boolean b=false;
+
+			System.out.println(a&&b);	//false
+			System.out.println(a||b);	//true
+			System.out.println(!a);		//false
+					
+		}
+
+	}
+
+6.	all relational operators are return boolean result.
+
+	public class Relational{
+
+		public static void main(String[]args){
+			
+			int a=20;
+			int b=20;
+
+			System.out.println(a<b);	//false
+			System.out.println(a<=b);	//true
+			System.out.println(a>b);	//false
+			System.out.println(a>=b);	//true
+			System.out.println(a==b);	//true	
+		}
+
+	}		
+	
+7.
+	public class Relational{
+
+		public static void main(String[]args){
+			
+			int a=20;
+			int b=30;
+			
+			if(a<b)
+				{
+				System.out.println("larger "+b);
+				System.out.println("smaller "+a);
+				}
+			else{
+				System.out.println("larger "+a);
+				System.out.println("smaller "+b);		
+				}
+		}
+
+	}			
+		
+	

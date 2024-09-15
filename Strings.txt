@@ -1,0 +1,236 @@
+																STRINGS
+																=======
+1.
+	* There are different ways to create Strings :
+		
+			- String s= "Happy";
+			- String s1=new String("Happy");
+	
+
+2.			
+	public class Strings {
+		String s1="Subrajit";
+		String s2="Lenka";
+
+		public void concat() {
+			System.out.println(s1+s2);
+		}
+		public static void main(String[] args) {
+			Strings strings=new Strings();
+			strings.concat();
+		}
+	}
+
+3.
+	* To find the length of a string one predefined method is there i.e 'length()'.By using this method we can calculate length of a string.
+
+	public class Strings {
+
+		String s="Subrajit";
+		
+		public void concat() {
+			System.out.println("Length : "+s.length());
+		}
+		public static void main(String[] args) {
+			Strings strings=new Strings();
+			strings.concat();
+		}
+	}	
+ 
+4.
+	* Extract String using subString()-method having two differnt ways :
+			
+		 a> using subString(int beginIndex):
+					
+				* It return new String that starts with begin-index.
+
+		 b> using subString(int beginIndex,int endIndex)
+		
+				* It return new String that starts with begin-index and end with end-index.
+
+	
+	public class Strings {
+	
+		public static void main(String[] args) {
+
+			String s1="Subrajit";
+
+			String s2=s1.substring(2);
+			System.out.println(s2);		//brajit
+
+			String s3=s1.substring(2, 4);
+			System.out.println(s3);		//br
+		}
+	}
+
+5.
+	* indexOf(...) - used to find the index of specific characher.
+		
+					- it return integer value (index position).
+
+
+	public class Strings {
+	
+		public static void main(String[] args) {
+
+			String s1="Subrajit";
+			System.out.println(s1.indexOf('b'));		//2
+		}
+	}
+
+6.
+		
+	public class Strings {
+	
+		public static void main(String[] args) {
+			String s1="Subrajit";
+			String s2="subrajit";
+			System.out.println(s1.matches(s2));		//false
+		}
+	}
+
+7 & 8.
+
+	*equals(..) - this method is used to compairing two strings ,Is there are exactly same or not.If case(Upper/Lower) is diffrent then return 'false'
+				If two exactly same then it returns 'true'. 
+	
+	* equalIgnoreCase(..) - this method is used to compair two string but here he didn't see the case (Upper/Lower) .it return boolean value (true/false).
+
+	* startsWith(..) - this method will check the string is starts with specified preffix or not. it also return boolean value(true/false).
+	
+	* endsWith(..) - this method will check the string is ends with specified suffix or not. it also return boolean value(true/false).
+	
+	* compareTO(..) - this method will check the two Strings are exxactly same or not,
+					  -If both are same then return '0'.
+					  -If 1st String is greater than another string it return ' >0'. (+ve number)
+					  -If 1st String is smaller than another string it return ' <0'. (-ve number)
+
+
+	
+	public class Strings {
+	
+	public static void main(String[] args) {
+
+		String s1="Java program";
+		String s2="JAva program";
+
+		System.out.println(s1.equals(s2));				//false
+		System.out.println(s1.startsWith("Java"));		//true
+		System.out.println(s1.equalsIgnoreCase(s2));		//true
+		System.out.println(s1.endsWith("program"));		//true
+		
+		System.out.println(s1.compareTo(s2));			//+ve number
+		}
+	}
+
+9.	
+	* trim() - method is used to removed white spaces from the given string.
+		
+	public Trim{
+	
+		public static void main(String[]args){
+			
+			String s="Java Program".
+			System.out.println(s.trim());
+		}
+	}
+	
+10.		
+	* replace(_,_) - method used to replace old char to new char in a string.
+
+		
+	public class Strings {
+	
+	public static void main(String[] args) {
+		String s1="Java program";
+		String s2="JAva program";
+			
+		String s3=s1.replace('J','K');
+		System.out.println(s3);			//Kava program
+	}
+}
+
+11.
+	*	split()- method is used to convert string to an array format.
+
+				what-ever we pass the parameter in their the new string will split to another string.
+	
+	
+	public class Strings {
+	
+	public static void main(String[] args) {
+		String course="HTML CSS Java .Net Python C#";
+		
+		String[] spl=course.split(" ");	//where one space is there , then the next string is create
+		
+		for(String s:spl)
+			System.out.println(s);
+		}
+	}
+
+12.
+	* valueOf() - method is used to convert other datatypes to string datatype.
+			
+				- Using String-class we can call valueOf()-method.
+	
+	
+		public class Strings {
+	
+				public static void main(String[] args) {
+						int n=1254;
+						String St=String.valueOf(n);
+						System.out.println(St);
+				}
+		}
+
+13.
+			public class Strings {
+	
+				public static void main(String[] args) {
+						Integer n=78950;
+						String St=String.valueOf(n);
+						System.out.println(St);
+				}
+		}
+	
+
+14.		
+	*toLowerCase() - method is used to convert upper case to lower case.
+
+	
+		public class Strings {
+	
+				public static void main(String[] args) {
+						String upper="JAVA";
+						String lower=upper.toLowerCase();
+						System.out.println(lower);
+				}
+		}
+
+	
+
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,190 @@
+1.
+	
+	interface SuperInterface{
+		void soal();
+	}
+	public class Interface implements SuperInterface{
+		
+			@Override
+			public void soal() {
+				System.out.println("Interface.soal()-implemented");
+			}
+			public static void main(String[] args) {
+
+				Interface in=new Interface();
+				in.soal();
+			}		
+	}
+
+2.
+	* If we write two abstract method in inteface, and implements only one method its shows error.. bcz these two methods must be implements
+
+		in sub class or that class take abstract class.
+
+3.
+	
+	interface SuperInterface{
+		void soal();
+		void menu();
+	}
+	class SubClass implements SuperInterface{
+
+		@Override
+		public void soal() {
+			System.out.println("SubClass.soal()-implemented");	
+		}
+
+		@Override
+		public void menu() {
+			System.out.println("SubClass.menu()-implemented");	
+		}
+	}	
+	public class Interface {
+			public static void main(String[] args) {
+
+				SuperInterface sup=new SubClass();
+				sup.soal();
+				sup.menu();
+			}		
+	}
+
+4.
+	
+	interface SuperInterface{
+		void soal();
+	}
+	interface SubInterface {
+		void menu();
+	}
+	public class Main implements SuperInterface,SubInterface  {
+	
+		@Override
+		public void menu() {
+			System.out.println("Main.menu()");	
+		}
+
+		@Override
+		public void soal() {
+			System.out.println("Main.soal()");	
+		}		
+		
+		public static void main(String[] args) {
+				SuperInterface su=new Main();
+				su.soal();
+				SubInterface sub=new Main();
+				sub.menu();
+		}		
+	}
+
+5.
+	
+	interface SuperInterface{
+		void soal();
+	}
+	interface SubInterface {
+		void soal();
+	}
+	public class Main implements SuperInterface,SubInterface  {
+		
+		@Override
+		public void soal() {
+			System.out.println("Main.soal()");	
+		}		
+		
+	public static void main(String[] args) {
+
+			Main su=new Main();
+				su.soal();		
+		}		
+	}
+	
+6.
+	
+	interface SuperInterface{
+		default void soal() {
+			System.out.println("SuperInterface.soal()");
+		}
+	}
+
+	public class Main implements SuperInterface {
+		
+		public static void main(String[] args) {
+				SuperInterface su=new Main();
+				su.soal();		
+		}		
+	}
+
+7.
+	
+	interface SuperInterface{
+		void soal();
+	}
+	interface SubInterface extends SuperInterface {
+		void menu();
+	}
+	public class Main implements SubInterface  {
+	
+		@Override
+		public void soal() {
+			System.out.println("Main.soal()");	
+		}		
+		@Override
+		public void menu() {
+			System.out.println("Main.menu()");	
+		}	
+		
+		public static void main(String[] args) {
+				Main su=new Main();
+				su.soal();
+				su.menu();
+		}
+	}
+
+8.
+	public interface MainInter {
+		int n = 10;
+		void menu();
+	}
+
+	public class Main implements MainInter {
+		@Override
+		public void menu() {
+			System.out.println("Flip.menu()-implemented");
+		}
+		public static void main(String[] args) {
+			Main flip=new Main();
+			flip.menu();
+			System.out.println(flip.n);
+		}
+	}
+
+9.
+	* Interface can't be private or protected type . 
+
+	* Interfaces are by-default public type.
+
+	* If we try to assign private or protected access-modifier to interface then it shows compilation error.
+
+10.
+	* Inside the interface all the fields are by-default public,static and final.So we cant declar private & protected.
+
+		interface MainInter {
+
+			public int a = 10;
+		
+ 		}
+
+11.
+	  interface MainInter {
+
+		public static final int a = 10;
+ 	}
+
+	public class Main implements MainInter {
+	
+		public static void main(String[] args) {
+		
+			System.out.println(a);
+		}
+	}
+	

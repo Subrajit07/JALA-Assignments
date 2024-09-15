@@ -1,0 +1,81 @@
+1.
+	* creating abstract class we need 'abstract' keyword.
+
+		abstract class One{
+			abstract void moon();
+			void sun() {
+				System.out.println("One.sun()");
+			}
+		}
+		public class AbstractClass extends One{
+				@Override
+				void moon() {
+					System.out.println("AbstractClass.moon()");
+				}
+				public static void main(String[] args) {
+					
+			}
+		}
+
+2.
+	
+		abstract class One{
+			abstract void moon();
+		}
+		public class AbstractClass extends One{
+				@Override
+				void moon() {
+					System.out.println("AbstractClass.moon()");
+				}
+				public static void main(String[] args) {
+					AbstractClass ab=new AbstractClass();
+					ab.moon();
+			}
+		}
+
+3.
+	
+		abstract class One{
+			abstract void moon();
+		}
+		class Abstract extends One{
+			@Override
+			void moon() {
+				System.out.println("AbstractClass.moon()");
+			}
+			void newOne() {
+				Abstract ab=new Abstract();
+				ab.moon();
+			}
+		}
+		public class AbstractClass {
+				public static void main(String[] args) {
+					Abstract ab=new Abstract();
+					ab.newOne();
+			}
+		}
+
+4. 	
+	
+		abstract class One{
+			abstract void moon();
+			void sun() {
+				System.out.println("One.sun()");
+			}
+		}
+		class Abstract extends One{
+			@Override
+			void moon() {
+				System.out.println("AbstractClass.moon()");
+			}
+			void newOne() {
+				Abstract ab=new Abstract();
+				ab.sun();
+			}
+		}
+		public class AbstractClass {
+				public static void main(String[] args) {
+					Abstract ab=new Abstract();
+					ab.newOne();
+			}
+		}

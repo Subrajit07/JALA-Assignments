@@ -1,0 +1,175 @@
+								JAVA BASICS
+								============
+
+1. => To create a class in java we need a 'class' keyword, by using the 
+	
+	'class'keyword we create a class.
+	
+  eg:- class World { }
+	
+	=> An object id created from a class. Object is created by using 
+		
+		'new' keyword.
+	- We can create multiple object in a single class.
+
+  eg:- If we create the above class object :
+			
+			World w = new World();
+
+	=> Method is used to perform some action in the java class.
+	
+	- To create a method, have some rules like: 
+			
+		* the method must b create inside the class.
+
+		* method is ennded with ().
+	
+		* to create a method having a signature i.e-
+				
+			<access-modifier> <return-type> method_name (){}
+	
+  eg:- public void display(){ }
+
+
+2. TO PRINT MY NAME:-
+
+	public class PrintName{
+
+		public static void main(String[]args){
+		
+			System.out.println("Subrajit Lenka");
+			
+		}
+	}
+
+3.  SingleLine Comment:-
+		
+			class Book{
+
+				public static void main(String[]args){
+
+				//this is single line comment
+
+				}
+			}
+	
+	Multi-line comment:-
+			
+			class Book{
+
+				public static void main(String[]args){
+
+				/* this is 
+				  
+				  multi-line comment */					
+
+				}
+			}
+
+	Documentation comment:-
+				
+			class Book{
+
+				public static void main(String[]args){
+
+				/* this is
+				 *
+				 * Documentation
+				 *
+				 *comment 
+				 *
+				 */
+				}
+			}
+
+4.	
+	int : it is a primitive datatype  for declare integer values.
+		
+	      if we don't declar any thing just take a positive number that
+		   bydefault take integer.
+	
+	boolean : it is a premitive datatypes, it only take true/ false value.
+	
+	char : it is a premitive datatypes, it take single character with
+			
+			single quotes.
+
+	float : it is a premitive datatypes, it take single-precisssion 
+			
+			of decimal number. Suffix:- f/F
+	
+	double : it is a premitive datatypes, it take double-precisssion 
+			
+			of decimal number.
+	
+	
+	public class DataTypes{
+		
+		int a=10;	
+
+		boolean bool=true;
+
+		char ch='c';
+	
+		float f=3.25f;
+		
+		double db=85.36698445;
+
+		public static void main(String []args){
+		
+			System.out.println("int "+a);
+
+			System.out.println("boolean "+bool);
+
+			System.out.println("char "+ch);
+		
+			System.out.println("float "+f);
+
+			System.out.println("double "+db);
+		}
+	}
+
+5.	
+	public class Variables{
+	
+		 int global=100;
+		
+		public static void main(String[]args){
+
+			int local=200;
+	
+			System.out.println("Local variable "+local);
+		}
+
+	}
+	
+	
+	- here in the above program i create both local & global variable.
+	
+	- inside the method if we take a variable i.e local variable &
+		
+      we can call directly.
+
+	- outside the  method if we take varible i.e global varibles & to 
+	
+	  call the global variable we should be create object of the class.
+
+6.
+	public class Name{
+	
+		public void print(){
+		
+			System.out.println("Subrajit Lenka");
+		}
+
+		public static void main(String[]args){
+	
+			Name name=new Name();
+			
+			name.print();
+		}
+	}
+
+
+
+ 

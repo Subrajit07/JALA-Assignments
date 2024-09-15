@@ -1,0 +1,79 @@
+													INHERITANCE
+													===========
+1.
+
+class A{
+
+	public void Soal() {
+
+		System.out.println("A.Soal()");
+	}
+
+	public void ClassA1() {
+		System.out.println("A.ClassA1()");
+	}
+
+	public void ClassA2() {
+		System.out.println("A.ClassA2()");
+	}
+}
+
+class B extends A {
+
+	@Override
+	public void Soal() {
+		System.out.println("B.Soal()");
+	}
+
+	public void ClassB1() {
+		System.out.println("B.ClassB1()");
+	}
+
+	public void ClassB2() {
+		System.out.println("B.ClassB2()");
+	}
+}
+
+class C extends B {
+	@Override
+	public void Soal() {
+		System.out.println("C.Soal()");
+	}
+
+	public void ClassC1() {
+		System.out.println("C.ClassC1()");
+	}
+
+	public void ClassC2() {
+		System.out.println("C.ClassC2()");
+	}
+}
+
+public class INheritance1 {
+
+	public static void main(String[] args) {
+
+		A a = new A();
+		a.ClassA1();
+		a.ClassA2();
+
+		B b=new B();
+			b.ClassA1();		//super class method A
+			b.ClassA2();		//super class method A
+			b.ClassB1();
+			b.ClassB2();
+
+		C c=new C();
+			c.ClassA1();		//super class method A
+			c.ClassA2();		//super class method A
+			c.ClassB1();		//super class method B
+			c.ClassB2();		//super class method B
+			c.ClassC1();
+			c.ClassC2();
+		
+		A1 a1=new B1();
+			a1.Soal();		// here we call override method of super class in B class
+		a1=new C1();
+			a1.Soal();		// here we call override method of super class in C class
+	}
+}

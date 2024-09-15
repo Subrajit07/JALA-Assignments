@@ -1,0 +1,86 @@
+														METHOD OVERLOADING
+														==================
+1.
+		
+		public class AccessMod {
+
+			public void method1(int a,int y) {
+
+				System.out.println("AccessMod.method1()-2param");
+			}
+			public void method1(int a,int b,int c) {
+
+				System.out.println("AccessMod.method2()-3-param");
+			}
+				public static void main(String[] args) {
+					AccessMod am=new AccessMod();
+					am.method1(10, 20);
+					am.method2(5, 8, 4);
+				}
+		}
+
+2.
+		
+		public class AccessMod {
+
+			public void method1(int a,double y) {
+
+				System.out.println("AccessMod.method1()-2param");
+			}
+			public void method1(float a,int b,long c) {
+
+				System.out.println("AccessMod.method2()-3-param");
+			}
+				public static void main(String[] args) {
+					AccessMod am=new AccessMod();
+					am.method1(10, 20);
+					am.method2(5, 8, 4);
+				}
+		}
+
+3.	
+	* we cant't write  two methods with the same name and same number of parameters of same type in a class, bcz its not overloading rule.
+
+	* Overloading rule is ,both method having same same but diffrent parameter or diffrent datatype of parameters.
+	
+	* If we write two method having same name, same no.of parameter & same type then it shows compilation error.
+
+
+4.
+		
+		public class AccessMod {
+
+			public void method1(float a,double b) {
+
+				System.out.println("AccessMod.method1()-2param");
+			}
+			public void method1(long a,int b) {
+
+				System.out.println("AccessMod.method2()-3-param");
+			}
+				public static void main(String[] args) {
+					AccessMod am=new AccessMod();
+					am.method1(10, 20.2);
+					am.method1(5, 8);
+				}
+		}
+
+5.
+		
+		public class AccessMod {
+
+			public void method1(float a,double b) {
+
+				System.out.println("AccessMod.method1()-2param");
+			}
+			public long method1(long a,int b) {
+
+				System.out.println("AccessMod.method2()-3-param");
+				return a+b;
+			}
+				public static void main(String[] args) {
+					AccessMod am=new AccessMod();
+					am.method1(10, 20.2);
+					am.method1(5, 8);
+				}
+		}	

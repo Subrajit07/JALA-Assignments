@@ -1,0 +1,103 @@
+																This & Super
+																============
+1.
+	
+	public class ThisAndSuper 
+		{
+			int a=10;
+			public void menu() {
+				System.out.println(this.a);
+			}
+		
+			public static void main(String[] args) {
+				ThisAndSuper t=new ThisAndSuper ();
+				t.menu();
+			}
+		}
+
+2.
+	class Super{
+		int s=25;
+		public void menu() {
+			System.out.println("Menu-super");
+		}
+	}
+	public class This1 extends Super
+	{
+		public void moon() {
+			System.out.println(super.s);
+			super.menu();
+			}
+		
+		public static void main(String[] args) {
+			This1 t=new This1();
+			t.moon();
+		}
+	}
+
+3.
+		
+	public class Cons1 
+	{
+		 public Cons1() {
+			System.out.println("default cons");
+		}
+		public Cons1(int a) {
+			this();
+		}
+		
+		public static void main(String[] args) {
+			Cons1 s1=new Cons1(10);
+			
+		}
+	}
+
+4.
+	public class Soal{
+		public Soal(int a) {
+			this();
+			System.out.println("One param cons");
+		}
+		public Soal(int a,int b){
+			this(a);
+			System.out.println("two param cons")
+		}
+		public Soal(int a,int b,int c){
+			this(a,b);
+			System.out.println("three param cons");
+		}
+		public static void main(String[] args) {
+
+			Cons1 s1=new Cons1(10,20,30);
+			
+		}	
+	}
+
+5.
+	
+	class Parent{
+	
+		Parent(){
+			System.out.println("parent cons");
+		}
+	}
+	public class Cons1 extends Parent
+	{
+		 public Cons1() {
+			 super();
+			System.out.println("child cons");
+		}
+			public static void main(String[] args) {
+			Cons1 s1=new Cons1();
+	
+		}	
+	}
+
+6.
+	* We cann't use this(),super() inside the methods. this()& super() are the special keywords those are used only in Constructor.
+	
+	* But this and super keywords are used in methods also to calling instance variable and instance methods.
+
+
+
+

@@ -1,0 +1,97 @@
+																	ACCESS-MODIFIERS
+																	================
+
+1.	
+		public class AccessMod {
+				private int num=10;
+
+				public final int getNum() {
+					return num;
+				}
+				public final void setNum(int num) {
+					this.num = num;	
+				}
+	
+				private void mod() {
+					System.out.println("AccessMod.mod()");
+				}
+				public static void main(String[] args) {
+					AccessMod am=new AccessMod();
+					System.out.println(am.getNum());
+					am.mod();
+				}
+		}
+	
+	* we can't access private fields and methods outside the class.
+
+2.
+	* in java if we dont declare any access modifier then it should be default access modifier will take.
+			
+		class Super{
+			 int num=10;
+
+			 void mod() {
+				System.out.println("AccessMod.mod()");
+			}
+		}
+		public class AccessMod {
+				public static void main(String[] args) {
+					Super am=new Super();
+					System.out.println(am.num);
+					am.mod();
+				}
+		}
+
+3.
+		
+		class Super{
+			protected int n=100;
+			protected void menu() {
+				System.out.println("AbstractClass.menu()");
+			}
+		}
+			
+		class SuperX{
+			protected int num=10;
+
+			protected void mod() {
+				System.out.println("AccessMod.mod()");
+			}
+		}
+		public class AccessMod {
+				public static void main(String[] args) {
+					SuperX am=new SuperX();
+					System.out.println(am.num);
+					am.mod();
+					Super ac=new Super();
+					System.out.println(ac.n);
+					ac.menu();
+				}
+		}
+
+4.
+	
+		class Super{
+			public int n=100;
+			public void menu() {
+				System.out.println("AbstractClass.menu()");
+			}
+		}
+	
+		class SuperX{
+			public int num=10;
+
+			public void mod() {
+				System.out.println("AccessMod.mod()");
+			}
+		}
+		public class AccessMod {
+				public static void main(String[] args) {
+					SuperX am=new SuperX();
+					System.out.println(am.num);
+					am.mod();
+					Super ac=new Super();
+					System.out.println(ac.n);
+					ac.menu();
+				}
+		}

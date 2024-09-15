@@ -1,0 +1,305 @@
+
+
+1.
+		
+		public class Exception {
+				public void Divide() {
+	
+						int a=10;
+						int b=0;
+						System.out.println(a/b);		// here we got arithmatic exception
+					}
+				}
+				public static void main(String[] args) {
+					Exception am=new Exception();
+					am.Divide();
+				}
+		}
+
+2.
+		
+		public class Exception {
+				public void Divide() {
+					try {
+						int a=10;
+						int b=0;
+						System.out.println(a/b);
+
+					}catch(ArithmeticException ae) {				// to handle arithmatic exception 
+
+						System.err.println(ae.getMessage);
+					}
+				}
+				public static void main(String[] args) {
+					Exception am=new Exception();
+					am.Divide();
+				}
+		}
+
+3.
+		
+		public class Exceptions {
+			 
+			    public  void ThrowsException() throws Exception {
+
+			        throw new Exception("This is an exception from ThrowsException-method.");
+			    }
+			    public static void main(String[] args) throws Exception {
+			    	
+			        Exceptions e=new Exceptions();
+			        e.ThrowsException();
+			  	    }
+			}
+
+4.
+	public class Exceptions{
+				public void Divide() {
+					try {
+						int a=10;
+						int b=0;
+						System.out.println(a/b);
+
+					}catch(ArithmeticException ae) {				
+
+						System.err.println(" You cant divide /0...");
+					}
+					catch(Exception e) {
+
+						e.printStackTrace();
+					}
+				}
+				public static void main(String[] args) {
+					Exceptions am=new Exceptions();
+					am.Divide();
+				}
+		}
+
+5.
+	public class Exceptions{
+				public void Divide() {
+					try {
+						int a=10;
+						int b=0;
+						System.out.println(a/b);
+
+					}catch(Exception ae) {				
+						System.err.println(" You cant divide /0...");
+					}
+				}
+				public static void main(String[] args) {
+					Exceptions am=new Exceptions();
+					am.Divide();
+				}
+		}
+
+6.
+
+7.
+	public class Exceptions{
+				public void Divide() {
+					try {
+						int a=10;
+						int b=0;
+						System.out.println(a/b);
+
+					}catch(Exception ae) {				
+						System.err.println(" You cant divide /0...");
+					}
+					finally {
+						System.out.println("Final block excecuted");
+					}
+				}
+				public static void main(String[] args) {
+					Exceptions am=new Exceptions();
+					am.Divide();
+				}
+		}
+
+8.
+	public class ArithException {
+				public void Divide() {
+					try {
+						int a=10;
+						int b=0;
+						System.out.println(a/b);
+
+					}catch(ArithmeticException ae) {				
+
+						System.err.println(ae.getMessage);
+					}
+				}
+				public static void main(String[] args) {
+					ArithException am=new ArithException();
+					am.Divide();
+				}
+		}
+
+9.
+	public class Exceptions{
+				int a[]= {10,2,5,7};
+				public  void arr() {
+					for(int i=0;i<=4;i++) {
+						System.out.println(a[i]);			//here we got arrayindexOutOfBound Exception bcz we fetch array index size 4 but actual size 3
+					}
+				}
+				public static void main(String[] args) {
+					Exceptions ex=new Exceptions();
+					ex.arr();
+				}
+		}
+
+10.
+	public class Exceptions{
+				
+	public static void main(String[] args) {
+        try {
+            Class.forName("com.example.NonExistentClass");	// this type class is not avaible so it throws classNotFoundException
+
+        } catch (ClassNotFoundException e) {
+            System.err.println(e.getMessage());
+        }
+      }
+	}	
+	
+11.
+	import java.io.File;
+	import java.io.FileInputStream;
+
+	public class Exceptions{
+				public void Files() {
+					try {
+						File f=new File("c:/lenka");
+						FileInputStream fio=new FileInputStream(f);
+						
+					}catch(Exception e) {
+						e.printStackTrace();
+					}
+				}
+				public static void main(String[] args) {
+					Exceptions e=new Exceptions();
+					e.Files();
+				}
+		}
+
+12.
+	import java.io.File;
+	import java.io.IOException;
+	import java.io.PrintWriter;
+
+	public class Exceptions{
+	
+				public static void main(String[] args) {
+					try {
+						File f=new File("te_xt.txts");
+						PrintWriter pw=new PrintWriter(f);
+						pw.write("Java Technologies");
+						pw.close();
+					}catch(IOException e) {
+						System.out.println(e.getMessage());
+					}
+				}
+		}
+
+13.
+		Sorry! I have no idea
+
+
+14.
+
+	    class ExampleClass {
+
+	        public void Method() {
+	            System.out.println("This is an existing method.");
+	        }
+	    }
+		public class Exceptions{
+
+	    public static void main(String[] args) {
+	        try { 
+   
+	            Class<ExampleClass> c= ExampleClass.class;
+
+	             c.getMethod("Methods");
+
+	        } catch (NoSuchMethodException e) {
+	            System.out.println(e.getMessage());
+	        }
+	    }
+	}
+
+15.
+	
+	public class Exceptions{
+
+	    public static void main(String[] args) {
+	        try {    
+	           String s=null;
+	           System.out.println(s.length());			//here string is null so we cant calculate length of that string
+
+	        } catch (NullPointerException e) {
+	           System.out.println(e.getMessage());
+	        }
+	    }
+	}
+	
+16.	
+	
+	public class Exceptions{
+
+	    public static void main(String[] args) {
+	        try {  
+	        	int n=Integer.parseInt("Hello");				// if our input is not matching with return datatypes
+
+	        } catch (NumberFormatException e) {
+	           System.out.println(e.getMessage());
+	        }
+	    }
+	}
+
+17.	
+		
+	public class Exceptions{
+
+	    public static void main(String[] args) {
+	     try {
+	    	  String s="Java";
+
+		       for(int i=0;i<=s.length();i++) {				// here we got StringIndexOutOfBoundsException bcz the string length 4 but we fetch 5
+
+		    	   System.out.println(s.charAt(i));
+		       }
+	     }
+		       catch(StringIndexOutOfBoundsException st) {
+		    	   st.printStackTrace();
+		       }
+	    }
+	}
+
+18.
+		
+	import java.sql.Connection;
+	import java.sql.DriverManager;
+	import java.sql.SQLException;
+
+	public class Exceptions{
+
+	    public static void main(String[] args) {
+	    	try {
+	    		Connection con=DriverManager.getConnection("jdbc:mysql://localhost/lenka_subrajit","root","Lenka");		//no driverclass found
+	    		java.sql.Statement st=con.createStatement();
+	    		st.execute("select * from admin1");				//that table doesnot exist
+	    		
+	    	}catch(SQLException sql) {
+	    		System.out.println(sql.getMessage());
+	    	}finally {
+				
+			}
+	    	
+	    }
+	}
+
+	
+
+	
+	
+	
